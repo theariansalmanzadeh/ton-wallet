@@ -18,6 +18,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     >
       <App />
     </TonConnectUIProvider>
-    ,
+    
   </React.StrictMode>
 );
