@@ -5,12 +5,17 @@ import WalletDetails from "./components/WalletDetails";
 import Provider from "./components/Provider";
 import "./App.css";
 import WalletConnect from "./components/WalletConnect";
+import { useState } from "react";
+import SetAddress from "./components/SetAddress";
+import AddressInputModal from "./components/modal/AddressInputModal";
 
 function App() {
+  const [isModal, setIsModal] = useState<boolean>(false);
   return (
-    <div className="flex flex-col items-center w-screen">
+    <div className="flex flex-col items-center w-full">
       <Provider>
         {/* <TelegramWrapper> */}
+        <AddressInputModal isModal={isModal} setIsModal={setIsModal} />
         <div>
           <p>A quick demo with animations and ton sdk in telegram</p>
         </div>
@@ -21,6 +26,7 @@ function App() {
         <div className="flex flex-col items-center w-full">
           <WalletDetails />
           <WalletConnect />
+          <SetAddress setIsModal={setIsModal} />
         </div>
         {/* </TelegramWrapper> */}
       </Provider>
