@@ -4,7 +4,7 @@ const WalletDetails = () => {
   const userFriendlyAddress = useTonAddress();
   // const rawAddress = useTonAddress(false);
   return (
-    <div>
+    <div className="my-10">
       {userFriendlyAddress ? (
         <p>Your wallet is :{userFriendlyAddress}</p>
       ) : (
