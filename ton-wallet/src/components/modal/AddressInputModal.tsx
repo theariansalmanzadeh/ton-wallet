@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useAnimate } from "framer-motion";
 import Modal from "@mui/material/Modal";
-import { motion } from "framer-motion";
 import { style } from "./style";
 import { Input } from "@mui/material";
 
@@ -44,7 +43,7 @@ const AddressInputModal = ({
             width: "100%",
             padding: "5px 10px",
           }}
-          onChange={()=>{}}
+          onChange={() => {}}
         />
       </Box>
     </Modal>
